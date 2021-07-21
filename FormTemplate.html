@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .nav {
+        background-color: #007d8f !important;
+
+        .alert1 {
+            display: none;
+        }
+
+        .alert1Valid {
+            display: none;
+        }
+
+        .alert2 {
+            display: none;
+        }
+
+        .alert2Valid {
+            display: none;
+        }
+
+        .alert3 {
+            display: none;
+        }
+
+        .alert3Valid {
+            display: none;
+        }
+
+        .alert4 {
+            display: none;
+        }
+
+        .alert4Valid {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class=" nav navbar text-white px-5 d-flex ">
+        <div class="row">
+            <img src="https://drive.google.com/thumbnail?id=1K9MzSj7PdjqcZN33VMMBfioNacbS7Wfs" width="106" height="44">
+            <p class="navbar-brand">
+                SmartServices Réservation de Services
+            </p>
+        </div>
+        <div class="">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="navbar-brand bi bi-envelope-fill text-white"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+            </svg>
+            <p class="navbar-brand">
+                <?=urlemail?>
+            </p>
+        </div>
+    </nav>
+
+    <div class="container w-60 py-5">
+
+        <div class="card border-dark px-4 py-1 my-3">
+            <div class="row">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-envelope-fill mx-1" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                </svg>
+
+                <p> Email : </p>
+                <?= emailhtml ?>
+
+            </div>
+            <div class="row">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill mx-1" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+
+                <p> Salle : </p>
+                <?= sallehtml ?>
+
+            </div>
+            <div class="row ">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-info-square-fill mx-1"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+
+                <p> Libelle : </p>
+                <?= libellehtml ?>
+
+            </div>
+            <div class="row ">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-calendar-week-fill mx-1"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z" />
+                </svg>
+
+                <p> La réunion du
+                    <?= dateEventhtml ?> se deroulera de
+                    <?= dateStarthtml ?> a
+                    <?= dateEndthtml ?>
+                </p>
+
+            </div>
+            <div class="row">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle mx-1" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                        d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                </svg>
+
+                <p>Nombres de participants : </p>
+                <?= nbDeParticipantshtml?>
+
+            </div>
+            <div class="row">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-camera-video-fill mx-1"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
+                </svg>
+
+                <p>Equipements de la salle : </p>
+                <?=equipementsListe?>
+
+            </div>
+        </div>
+        <div>
+            <div class="form-group">
+                <label>Nom et prénom</label>
+                <input type="text" class="form-control text-light bg-dark" id="nomOrganisateurhtml"
+                    value="<?=nomOrganisateurhtml?>">
+            </div>
+            <div class="form-group ">
+                <label>Demande complexe</label>
+                <select id="demandecomplexe" class="form-control text-light bg-dark">
+                    <? for(i=0; i< demandeComplexeListe.length; i++) {
+                     if(demandeComplexe== demandeComplexeListe[i]){
+                     ?>
+                    <option selected>
+                        <?= demandeComplexeListe[i] ?>
+                    </option>
+                    <? } 
+                     else{
+                     ?>
+                    <option>
+                        <?= demandeComplexeListe[i] ?>
+                    </option>
+                    <? } ?>
+                    <? } ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Equipements souhaité:</label>
+                <select multiple="multiple" class="form-control text-light bg-dark" id="choixequipements">
+                    <? for(i=0; i<= equipSuppListe.length; i++) {
+                     if( choixEquipementshtml.includes(equipSuppListe[i])){
+                     ?>
+                    <option selected>
+                        <?= equipSuppListe[i] ?>
+                    </option>
+                    <? }
+                     else{?>
+                    <option>
+                        <?= equipSuppListe[i] ?>
+                    </option>
+                    <? } ?>
+                    <? } ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Nombre de repas</label>
+                <input type="number" min="0" max="250" class="form-control text-light bg-dark " id="nbderepas"
+                    value="<?=nbDeRepashtml?>">
+                <div data-dismiss="alert1" class="alert1 invalid-feedback">La valeur doit être égale ou inférieur à 250
+                </div>
+                <div class="alert1Valid valid-feedback">✔️</div>
+            </div>
+            <div class="form-group">
+                <label>Type de repas</label>
+                <select class="form-control text-light bg-dark" id="typederepas" value="Mark">
+                    <? for(i=0; i<= typesRepasListe.length; i++) {
+                     if (typesRepasListe[i] == typeDeRepashtml){
+                     ?>
+                    <option selected>
+                        <?= typesRepasListe[i] ?>
+                    </option>
+                    <? }
+                     else{
+                     ?>
+                    <option>
+                        <?= typesRepasListe[i] ?>
+                    </option>
+                    <? } ?>
+                    <? } ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Nombre de petits déjeuner </label>
+                <input type="number" min="0" max="250" class="form-control text-light bg-dark " id="nbdedej"
+                    value="<?=nbDePetitsDejhtml?>">
+                <div data-dismiss="alert2" class="alert2 invalid-feedback">La valeur doit être égale ou inférieur à 250
+                </div>
+                <div class="alert2Valid valid-feedback">✔️</div>
+            </div>
+            <div class="row">
+                <div class="col form-group">
+                    <label>Nombre de cocktails </label>
+                    <input type="number" min="0" max="250" class="form-control text-light bg-dark" id="nbcocktails"
+                        value="<?=nbCocktailshtml?>">
+                    <div data-dismiss="alert3" class="alert3 invalid-feedback">La valeur doit être égale ou inférieur à
+                        250</div>
+                    <div class="alert3Valid valid-feedback">✔️</div>
+                </div>
+                <div class="col form-group">
+                    <label>Heure debut Cocktail </label>
+                    <input type="time" min="07:00" max="22:00" class="form-control text-light bg-dark" id="hcocktail"
+                        value="<?=hCocktailhtml?>">
+                    <div data-dismiss="alert4" class="alert4 invalid-feedback">min 07:00 max 22:00 </div>
+                    <div class="alert4Valid valid-feedback">✔️</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Installation Particulière</label>
+                <textarea class="form-control  text-light bg-dark" id="installationpart"
+                    rows="3"><?=instalParticuhtml?></textarea>
+            </div>
+            <div class="form-group">
+                <label>Imputation</label>
+                <textarea class="form-control  text-light bg-dark" id="imputation"><?=imputationhtml?></textarea>
+            </div>
+            <input id="ligneDuSheet" name="ligneDuSheet" type="hidden" value="<?=ligneDuSheeti?>">
+
+            <button id="btnModif" class="btn btn btn-outline-dark   my-2">Envoyer votre réponse
+            </button>
+            <a href="<?=URL?>?v=listeForms" class="btn btn btn-outline-dark   my-2">Mes événements</a>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("btnModif").addEventListener("click", doStuff);
+
+
+
+        function doStuff() {
+
+            if (document.getElementById("nbderepas").value >= 0 && document.getElementById("nbderepas").value <= 250) {
+                $('.alert1Valid').show()
+                $('.alert1').hide()
+                if (document.getElementById("nbdedej").value >= 0 && document.getElementById("nbdedej").value <= 250) {
+                    $('.alert2Valid').show()
+                    $('.alert2').hide()
+                    if (document.getElementById("nbcocktails").value >= 0 && document.getElementById("nbcocktails").value <= 250) {
+                        $('.alert3Valid').show()
+                        $('.alert3').hide()
+
+                        var eventUserInfo = {};
+                        var multiSelect = document.getElementById("choixequipements");
+                        var selected = [];
+
+                        for (var i = 0; i < multiSelect.length; i++) {
+                            if (multiSelect.options[i].selected) selected.push(multiSelect.options[i].value);
+                        }
+
+                        eventUserInfo.demandeComplexe = document.getElementById("demandecomplexe").value;
+                        eventUserInfo.choixEquipements = selected;
+                        eventUserInfo.nomOrganisateur = document.getElementById("nomOrganisateurhtml").value;
+                        eventUserInfo.nbDeRepas = document.getElementById("nbderepas").value;
+                        eventUserInfo.typeDeRepas = document.getElementById("typederepas").value;
+                        eventUserInfo.nbDedej = document.getElementById("nbdedej").value;
+                        if (document.getElementById("nbcocktails").value == "0" || document.getElementById("nbcocktails").value == "") {
+                            eventUserInfo.hCocktail = "00:00"
+                            eventUserInfo.nbCocktails = "0"
+                        }
+                        else {
+                            if (document.getElementById("hcocktail").value >= '07:00' && document.getElementById("hcocktail").value <= '22:00') {
+                                $('.alert4Valid').show()
+                                $('.alert4').hide()
+                                eventUserInfo.hCocktail = document.getElementById("hcocktail").value;
+                                eventUserInfo.nbCocktails = document.getElementById("nbcocktails").value;
+                            } else {
+                                $('.alert4Valid').hide()
+                                $('.alert4').show()
+
+                                return false;
+                            }
+                        }
+
+                        eventUserInfo.installationPart = document.getElementById("installationpart").value;
+                        eventUserInfo.imputation = document.getElementById("imputation").value;
+                        eventUserInfo.ligneDuSheet = document.getElementById("ligneDuSheet").value;
+                        google.script.run.withSuccessHandler(onSuccess).userClicked(eventUserInfo);
+
+                    } else {
+                        $('.alert3Valid').hide()
+                        $('.alert3').show()
+                        return false;
+                    }
+                } else {
+                    $('.alert2Valid').hide()
+                    $('.alert2').show()
+                    return false;
+                }
+            } else {
+                $('.alert1Valid').hide()
+                $('.alert1').show()
+                return false;
+            }
+        }
+        function onSuccess() {
+            window.open("<?=URL?>?idevent=<?=urlidevent?>&creator=<?=urlemail?>&v=Submit", "_top");
+        }
+
+        function afficher(email, Salle, libelle, DateEvent, DateStart, dateEnd, tableauEquipSupphtml) {
+            var htmlemail = document.getElementById("username").setvalue(email);
+        }
+        $(document).ready(function () {
+            $('#example-getting-started').multiselect();
+        });
+    </script>
+</body>
+
+</html>
