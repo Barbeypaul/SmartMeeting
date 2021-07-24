@@ -1,7 +1,7 @@
 //--Spreadsheet--adresses
-const SSCONSOLIDATIONID = "1kxuB93tw3CS6OvxOCyVcSMP74AgyemllTLdar3HAIAU";
-const SSPARAMETERFORMID = "1VItME2lIWuHYK_zGbj2fq8oKjHFEzWK17qSRLu-qToY";
-const SSBASEDECOMMANDE = "1NUo64SfsBy0vM168uianu1CkgGSXtvRJ3ZsdgzpLj-o";
+const SSCONSOLIDATIONID = "";
+const SSPARAMETERFORMID = "";
+const SSBASEDECOMMANDE = "";
 //--TemplatesHtml--
 const tmpAfficherForm = HtmlService.createTemplateFromFile('FormTemplate');
 const tmpAfficherMenu = HtmlService.createTemplateFromFile('Menu');
@@ -52,5 +52,5 @@ const coktailsBaseDeCommande = 'PetitsDej';
 
 const isMaintenance = false;
 
-const URL = 'https://script.google.com/macros/s/AKfycby174L6Zsw5HHIWIqrxmih0u83VZUgpxs2ZXi9oVi3swb1RRoM/exec';//url/exec ou dev
+const URL = 'https://script.google.com.............';//url/exec ou dev
              
